@@ -1,5 +1,5 @@
 // LOOPING THROUGH THE ARRAY
-
+//comment 
 function chunkArray(array, size) {
     let result = []
 
