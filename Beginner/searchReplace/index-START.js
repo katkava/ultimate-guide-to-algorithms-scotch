@@ -16,3 +16,4 @@ function searchReplace(str, word, newWord) {
  }
  return str.replace(regex, newWord)
 }
+
