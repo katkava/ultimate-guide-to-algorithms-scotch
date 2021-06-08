@@ -26,6 +26,8 @@ function rangeSum(arr) {
  }
  }
 
+ //using reduce 
+
  function rangeSum(arr) {
   let arrList = [];
   for(i =arr[0]; i <= arr[i]; i++) {
