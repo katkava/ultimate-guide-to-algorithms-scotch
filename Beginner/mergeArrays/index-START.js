@@ -4,6 +4,10 @@
  E.g mergeArrays([1,2,3,3,3], [1,4,5,2]) // should return [1,2,3,4,5]
 */
 
+
+
+
+
 function mergeArrays(...arrays) {
 
     let jointArray = []
@@ -17,5 +21,30 @@ function mergeArrays(...arrays) {
     
 }
 
+//filter 
 
+function mergeArrays(...arrays) {
+    let jointArray = []
+    array.forEach(array => {
+        jointArray = [...jointArray, ...array]
+    })
+    const uniqueArray = jointArray.filter((item, index) => jointArray.indexOf(item) === index)
+    return uniqueArray 
+}
+
+//using reduce 
+function mergeArrays(...arrays) {
+    let jointArray = []
+    arrays.forEach(array => {
+        jointArray = [...jointArray, ...array]
+    })
+    const uniqueArray = jointArray.reduce((newArray, item) => {
+        if(newArray.includes(item)){
+            return newArray
+        }else{
+            return [...newArray, item]
+        }
+    }, [])
+    return uniqueArray
+}
 module.exports = mergeArrays
